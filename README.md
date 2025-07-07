@@ -115,6 +115,3 @@ To change the logo:
 2. Update the icon path in `main.js` if using a different filename
 3. Rebuild with `npm run package`
 
-## License
-
-MIT License
