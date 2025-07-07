@@ -1,0 +1,37 @@
+{
+  "name": "ims-desktop-app",
+  "version": "1.0.0",
+  "description": "IMS Desktop App - Web Wrapper",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "package": "electron-packager . \"IMS Desktop\" --platform=win32 --arch=x64 --out=dist --overwrite --icon=assets/bookshop-logo.ico",
+    "dist": "electron-builder --publish=never"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.ims.desktop",
+    "productName": "IMS Desktop",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "assets/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "dir"
+    }
+  }
+}
